@@ -1,0 +1,9 @@
+#header_h1 {
+    color: red;
+}
+
+.home_article {
+	margin: 5px;
+    background-color: LightGray;
+    padding: 10px;
+}

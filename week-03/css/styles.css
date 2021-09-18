@@ -1,0 +1,67 @@
+/* base class details */
+.home_article {
+    margin: 5px;
+    background-color: LightGray;
+    padding: 10px;
+}
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+    body {
+        background-color: red;
+    }
+    /* hide the right article */
+    #right {W
+        display: none;
+    }
+}
+
+/* iPads, Tablets. */
+@media screen and (min-width: 481px) {
+    body {
+        background-color: orange;
+    }
+    /* add radius to article style */
+    .home_article {
+        border-radius: 14px;
+    }
+}
+
+/* Small screens, laptops */
+@media screen and (min-width: 769px) {
+    body {
+        background-color: #589ddb;
+    }
+    /* increase the font size of class piet */
+    .piet {
+        font-size: 20px;
+    }
+}
+
+/* Desktops, large screens. */
+@media screen and (min-width: 1025px) {
+    body {
+        background-color: green;
+    }
+    main {
+        display: table;
+    }
+    #left {
+        float: left;
+        width: 47%;
+    }
+    #right {
+        float: right;
+        width: 47%;
+    }
+    .piet {
+        text-shadow: 1px 2px 3px;
+    }
+}
+
+/* Extra large screens, TV. */
+@media screen and (min-width: 1201px) {
+    body {
+        background-color: white;
+    }
+}

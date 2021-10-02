@@ -1,0 +1,214 @@
+/* main body */
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* unordered list */
+ul {
+    padding-left: 0;
+}
+
+/* header 1 & 2 */
+h1, h2 {
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+/* link */
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+/* Nav Bar */
+nav {
+    padding: 0;
+}
+
+/* base class details */
+.home_article {
+    margin: 5px;
+    background-color: LightGray;
+    padding: 10px;
+}
+
+.koos {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* flex container */
+.navContainer {
+    /*border-radius: 10px;*/
+    background: rgb(46, 44, 47);
+    background: linear-gradient(0deg, rgba(46, 44, 47, 1) 0%, rgba(110, 121, 122, 1) 50%, rgba(46, 44, 47, 1) 100%);
+    /*box-shadow: 0 -5px 3px -3px black, 0 5px 3px -3px black;*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Raleway", sans-serif;
+}
+
+/* prime header */
+.prime {
+    font-family: 'Cabin Sketch', cursive;
+}
+
+/* flex item */
+.navItem {
+    background: rgb(46, 44, 47);
+    background: linear-gradient(0deg, rgba(46, 44, 47, 1) 0%, rgba(110, 121, 122, 1) 50%, rgba(46, 44, 47, 1) 100%);
+    display: flex;
+    flex-grow: inherit;
+}
+
+/* hover style */
+.navItem:hover {
+    background: rgb(34, 34, 34);
+    background: linear-gradient(0deg, rgba(34, 34, 34, 1) 0%, rgba(84, 84, 84, 1) 50%, rgba(34, 34, 34, 1) 100%);
+    box-shadow: inset 0 0 10px #000000;
+}
+
+/* active style */
+.active {
+    background: rgb(34, 34, 34);
+    background: linear-gradient(0deg, rgba(34, 34, 34, 1) 0%, rgba(84, 84, 84, 1) 50%, rgba(34, 34, 34, 1) 100%);
+    box-shadow: inset 0 0 10px #000000;
+}
+
+/* change font style */
+.kyk {
+    font-style: italic;
+}
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+    body {
+        background-color: red;
+    }
+
+    /* flex container */
+    .navContainer {
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: medium;
+    }
+}
+
+/* iPads, Tablets. */
+@media screen and (min-width: 481px) {
+    body {
+        background-color: orange;
+    }
+
+    /* add radius to article style */
+    .home_article {
+        border-radius: 14px;
+    }
+
+    /* flex container */
+    .navContainer {
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    /* flex item */
+    .navItem {
+        height: 40px;
+    }
+}
+
+/* Small screens, laptops */
+@media screen and (min-width: 769px) {
+    body {
+        background-color: #589ddb;
+    }
+
+    /* increase the font size of class piet */
+    .piet {
+        font-size: 20px;
+    }
+
+    .navContainer {
+        height: 50px;
+        font-size: 1.4rem;
+    }
+
+    /* flex item */
+    .navItem {
+        height: 50px;
+    }
+}
+
+/* Desktops, large screens. */
+@media screen and (min-width: 1025px) {
+
+    h1 {
+        font-size: 60px;
+    }
+
+    body {
+        background-color: green;
+    }
+
+    main {
+        display: table;
+    }
+
+    #left {
+        float: left;
+        width: 47%;
+    }
+
+    #right {
+        float: right;
+        width: 47%;
+    }
+
+    .piet {
+        font-size: 28px;
+        text-shadow: 1px 2px 2px;
+    }
+
+    /* change font style */
+    .kyk {
+        text-shadow: 0 0;
+    }
+
+    /* flex container */
+    .navContainer {
+        height: 50px;
+        font-size: 1.6rem;
+    }
+
+    /* flex item */
+    .navItem {
+        height: 50px;
+    }
+}
+
+/* Extra large screens, TV. */
+@media screen and (min-width: 1201px) {
+
+    h1 {
+        font-size: 72px;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    /* flex container */
+    .navContainer {
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    /* flex item */
+    .navItem {
+        height: 60px;
+    }
+}

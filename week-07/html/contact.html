@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- The head element contains machine-readable elements -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Page Title tag -->
+    <title>Contact</title>
+    <!-- Link tag to stylesheet -->
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <!-- Links to Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Primary Font Cabin Sketch Bold 700 -->
+    <!-- Secondary Architects Daughter Regular 400 -->
+    <!-- Typography Font Raleway Regular 400 -->
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Cinzel+Decorative:wght@700&family=Raleway&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<!-- All content goes in the body element -->
+
+<!-- Header element -->
+<header>
+    <h1>Contact</h1>
+    <!-- Nav tag -->
+    <nav>
+        <!-- Unordered list tag -->
+        <ul class="navContainer">
+            <!-- list item tag -->
+            <li class="navItem">
+                <!-- a tag to create a link (empty for now) -->
+                <a href="../html/index.html">HOME</a>
+            </li>
+            <li class="navItem">
+                <a href="../html/about.html">ABOUT</a>
+            </li>
+            <li class="navItem">
+                <a href="../html/examples.html">EXAMPLES</a>
+            </li>
+            <li class="navItem active">
+                <a href="#">CONTACT</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Main element -->
+<main id="contactForm">
+    <!-- Web form content -->
+    <!-- Credit to W3Schools https://www.w3schools.com/howto/howto_css_responsive_form.asp -->
+    <form id="contact_form" onsubmit="justDisplay(); return false;">
+        <div class="container">
+            <div>
+                <h2>Contact Us Today</h2>
+                <h3>We are eager to hear from you!</h3>
+                <p>Please fill out our extensive contact form, and we will get back to you as soon as
+                    possible.</p>
+            </div>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fullName">Full name:</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="fullName" name="fullName" type="text"
+                               placeholder="Your full name here" pattern="^.{1,50}$" required/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="address">Address:</label>
+                    </div>
+                    <div class="col-75">
+                        <!-- Validating address to contain any characters up to 50 -->
+                        <input id="address" name="address" type="text" pattern="^.{1,50}$"
+                               placeholder="Your address here" required/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="email">Email:</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="email" name="email" type="email"
+                               placeholder="Enter a valid email address"
+                               required/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="telephone">Telephone:</label>
+                    </div>
+                    <div class="col-75">
+                        <!-- Validating for most standard telephone number formats found on Stack Overflow. https://stackoverflow.com/questions/16699007/regular-expression-to-match-standard-10-digit-phone-number -->
+                        <input id="telephone" name="telephone" type="tel"
+                               placeholder="123-454-6758"/>
+                        <!-- we could add this pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" -->
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Where?</legend>
+                <label for="online" class="radio-inline">Online
+                    <input type="radio" id="online" name="meet" value="online" checked></label>
+                <label for="personal" class="radio-inline">Personal
+                    <input type="radio" id="personal" name="meet" value="personal"></label>
+            </fieldset>
+            <fieldset>
+                <legend>Why?</legend>
+                <label for="topic">What is the reason for the meeting?</label>
+                <select name="topic" id="topic">
+                    <option selected>Select an option</option>
+                    <option value="design">Design me a new website</option>
+                    <option value="develop">I need to discuss development of a new application</option>
+                    <option value="new_feature">I need a new feature for my existing application</option>
+                    <option value="bug">I need to discuss a bug in my application</option>
+                </select>
+            </fieldset>
+            <div>
+                <input type="submit" id="button" value="Submit"/>
+            </div>
+        </div>
+    </form>
+</main>
+
+<!-- Footer element -->
+<footer>
+    <!-- Paragraph tag -->
+    <p class="koos">Footer goes here.</p>
+</footer>
+
+<script type="text/javascript">
+    // my little function to show the data but not post it
+    function justDisplay() {
+        // convert the form to an object
+        let formData = new FormData(document.getElementById("contact_form"));
+        // build a little display
+        let display_form = "== THIS FORM DOES NOT POST DATA ==";
+        display_form += "\nfullName: " + formData.get("fullName");
+        display_form += "\naddress: " + formData.get("address");
+        display_form += "\nemail: " + formData.get("email");
+        display_form += "\ntelephone: " + formData.get("telephone");
+        display_form += "\ntopic: " + formData.get("topic");
+        // give a basic message
+        alert(display_form);
+        // stop the posting
+        return false;
+    }
+</script>
+
+</body>
+</html>
